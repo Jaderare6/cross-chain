@@ -1,0 +1,391 @@
+/* Basic Styles */
+body {
+  font-family: sans-serif;
+  color: #fff; /* Light text for dark background */
+  margin: 0;
+  padding: 0;
+  background-color: #222; /* Dark background color */
+}
+
+.header,
+.main-content,
+.footer {
+  padding: 2rem;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a; /* Darker header background */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  color: #fff; /* Light text for header */
+  margin-left: 1rem;
+}
+
+.navigation ,#navigation {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  margin-right: 1rem;
+}
+
+nav-bar{
+display:flex;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #ccc; /* Lighter text for navigation links */
+}
+
+.connect-wallet-btn {
+  background-color: #4CAF50; /* Green button color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Main Content Styles */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1a1a1a; /* Match header background */
+  padding: 4rem;
+  position: relative; /* For animation placement */
+}
+
+.hero-text-container {
+  flex: 1;
+  color: #fff; /* Light text for hero section content */
+}
+
+.hero-text-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text-container p {
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.get-started-btn {
+  background-color: #4CAF50; /* Green button color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero-animation-container {
+  width: 300px;
+  height: 300px; /* Adjust based on your animation size */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* Swap Interface Styles */
+.swap-interface {
+  background-color: #2777; /* Slightly lighter background for swap interface */
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.swap-interface h2 {
+  margin-bottom: 1rem;
+  color: #fff; /* Light text for swap interface */
+}
+
+.token-selection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.from-token,
+.to-token {
+  flex: 1;
+  position: relative; /* For dropdown arrow styling */
+}
+
+.swap-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.swap-amount,
+.order-type-section,
+.swap-summary,
+.swap-actions {
+  flex: 1;
+}
+
+.swap-amount label,
+.order-type-section label,
+.swap-summary label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ddd; /* Lighter text for labels */
+}
+
+.swap-amount .amount-controls button {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #333; /* Darker background for controls */
+  color: #fff; /* Light text for controls */
+}
+
+.swap-amount .amount-controls button:hover {
+  background-color: #444; /* Slightly darker on hover */
+}
+
+#use-max-balance {
+  background-color: #4CAF50; /* Green button color */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.radio-buttons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #ddd; /* Lighter text for radio buttons */
+}
+
+.radio-buttons input[type="radio"] {
+  margin-right: 10px;
+}
+
+.limit-order-details {
+  display: none;
+}
+
+.swap-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #ddd; /* Lighter text for summary */
+}
+
+.swap-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.swap-actions button {
+  background-color: #4CAF50; /* Green button color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Forms and Buttons Styles */
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ddd; /* Lighter text for labels */
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444; /* Dark border for forms */
+  border-radius: 3px;
+  background-color: #333; /* Darker background for forms */
+  color: #fff; /* Light text for forms */
+}
+
+.form-control:focus {
+  border-color: #4CAF50; /* Green border on focus */
+}
+
+/* Select Dropdown Styles */
+
+.form-control[type="select"] {
+  -webkit-appearance: none; /* Remove default select styling */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-control[type="select"] {
+  background-image: url("data:image/svg+xml;base64,phN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgIHRoZWlnaHQ9IjExIiB2aWV3Box="), url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgZWlkb25naHQ9IjExIiB2aWV3Box="), none; /* Add dropdown arrow icons */
+background-repeat: no-repeat, no-repeat;
+background-position: calc(100% - 10px) center, 10px center; /* Position arrows */
+}
+.form-control[type="select"]:focus {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgZWlkb25naHQ9IjExIiB2aWV3Box="), url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgZWlkb25naHQ9IjExIiBviewBox="0 0 16 11" fill="#4CAF50"><path d="M2 5l6 6 6-6z"/></svg>"), none; /* Green border and arrow on focus */
+}
+
+
+/* Order History Styles */
+.order-history {
+background-color: #222; /* Match header background */
+padding: 2rem;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+color: #fff; /* Light text for order history */
+}
+
+.order-history h2 {
+margin-bottom: 1rem;
+}
+
+.order-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+border-bottom: 1px solid #444; /* Dark border for order items */
+}
+
+.order-details,
+.order-status {
+flex: 1;
+}
+
+.order-status .status {
+font-weight: bold;
+}
+
+/* Media Queries (Example for Tablets) */
+@media only screen and (max-width: 768px) {
+.main-content {
+  flex-direction: column-reverse;
+}
+
+.hero-text-container,
+.hero-animation-container {
+  flex: 1;
+}
+
+.swap-interface {
+  margin-top: 2rem;
+}
+}
+
+/* Scroll Effects (Placeholder) */
+/* Replace with libraries like AOS or Locomotive Scroll */
+.aos-animate {
+opacity: 0;
+/* Additional styles for animations */
+}
+
+.aos-in {
+opacity: 1;
+/* Additional styles for animations on scroll */
+}
+
+
+/*media query*/
+
+
+/* Base Styles */
+body {
+font-size: 16px; /* Adjust base font size */
+}
+
+.container {
+max-width: 1024px; /* Adjust max-width for container */
+margin: 0 auto; /* Center content horizontally */
+padding: 2rem;
+}
+
+/* Tablet and Mobile Styles */
+@media only screen and (max-width: 768px) {
+.container {
+  max-width: 90%; /* Adjust max-width for smaller screens */
+}
+
+.swap-interface,
+.order-history {
+  margin-top: 1.5rem; /* Increase spacing between elements */
+}
+
+.form-control {
+  font-size: 14px; /* Adjust font size for smaller screens */
+}
+}
+
+/* Desktop Styles (Optional) */
+@media only screen and (min-width: 1024px) {
+.container {
+  padding: 3rem; /* Increase padding for larger screens */
+}
+
+.hero-text-container,
+.hero-animation-container {
+  flex-basis: 1; /* Adjust flex basis for balanced layout */
+}
+}
+.swap-interface {
+display: flex;
+flex-direction: column; /* Default column layout */
+gap: 1rem;
+
+@media only screen and (min-width: 768px) {
+  flex-direction: row; /* Switch to row layout on wider screens */
+}
+}
+
+.from-token,
+.to-token {
+flex: 1;
+}
+
+@media only screen and (max-width: 768px) {
+.from-token,
+.to-token {
+  width: 100%; /* Make tokens full width on smaller screens */
+}
+}
+.order-history {
+max-width: 800px; /* Set max-width for order history table */
+margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+.order-history {
+  overflow-x: auto; /* Enable horizontal scrolling for long tables */
+}
+}

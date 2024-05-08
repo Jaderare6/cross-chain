@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/chatgtp/from-scratch/style.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="bg-color-success">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+        
+
+
+                <img class="image-logo"src="/logo.png" height="50px" style="border-radius: 50px;" alt="Cross-Chain Token Swap Logo">
+
+
+
+          <a class="navbar-brand" href="#">Cross-Chain <span class="text-warning ">Swap</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Docs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Support</a>
+              </li>
+
+              <button type="button" class="btn btn-warning">Connect Wallet</button>
+
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!--hero section-->
+
+<!--<section class="hero-section">
+    <div class="hero-text-container">
+      <h2>Swap tokens seamlessly across blockchains.</h2>
+      <p>Experience the future of decentralized finance with our secure and efficient cross-chain swap platform.</p>
+      <button class="get-started-btn">Get Started</button>
+    </div>
+  </section>
+-->
+
+
+
+
+  <div class="px-4 py-5 my-5 text-center hero-section">
+    <img class="d-block mx-auto mb-4" src="/images/BTC-USDT-300x300-1-150x150@2x.png" alt="" width="120" >
+    <h1 class="display-5 fw-bold">Swap tokens seamlessly across blockchains.</h1>
+    <div class="col-lg-6 mx-auto hero-text-container">
+      <p class="lead mb-4">Experience the future of decentralized finance with our secure and efficient cross-chain swap platform.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-outline-warning btn-lg px-4 get-started-btn">Get Started</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  <section class="swap-interface mobile bg-dark   text-bg-dark ">
+    <h2>Swap Tokens</h2>
+
+    <div class="token-selection">
+      <div class="from-token">
+        <label for="swap-from">Swap From:</label>
+        <select id="swap-from">
+          <option value="eth">Ethereum (ETH)</option>
+          <option value="usdc">USD Coin (USDC)</option>
+          </select>
+      </div>
+      <div class="to-token">
+        <label for="swap-to">Swap To:</label>
+        <select id="swap-to">
+          <option value="eth">Ethereum (ETH)</option>
+          <option value="usdc">USD Coin (US USDC)</option>
+          </select>
+      </div>
+    </div>
+    <hr>
+
+    <div  class="swap-details">
+      <div class="swap-amount" >
+        <label for="swap-amount" >Amount:</label>
+        <input type="number" id="swap-amount" placeholder="0.0">
+        <div class="amount-controls">
+          <button id="use-max-balance" class="btn  btn-sm btn-warning">Use Max</button> </div>
+      </div>
+<hr>
+      <div class="order-type-section card bg-warning ">
+        <div class="card  text-bg-dark bg-dark  " style="margin-top: 30px; padding: 20px;">
+
+        <label class="card-header "style="margin: auto;" for="order-type">Order Type:</label>
+        <div class="radio-buttons" >
+
+          <label for="market-order">Market Order</label>
+          <input type="radio" id="market-order" name="order-type" value="market"><hr>
+          <label for="limit-order">Limit Order</label>
+          <input type="radio" id="limit-order" name="order-type" value="limit">
+        </div>
+
+        <hr>
+
+        <div class="limit-order-details" id="limit-order-section">
+          <label for="limit-rate">Limit Rate:</label>
+          <input type="number" id="limit-rate" placeholder="0.0" disabled>
+        </div>
+      <hr>
+      </div>
+
+      <div class="swap-summary card   bg-dark   text-bg-dark ">
+        <div class="estimated-amount">
+          <label for="estimated-amount">Estimated Amount:</label>
+          <span id="estimated-amount">-</span>
+        </div>
+        <hr>
+        <div class="gas-fee-section">
+          <label for="gas-fee">Gas Fee:</label>
+          <span id="gas-fee">Calculating...</span>
+        </div>
+        <hr>
+        <div class="advanced-options" id="advanced-options-section">
+          <label for="slippage-tolerance">Slippage Tolerance:</label>
+          <input type="number" id="slippage-tolerance" min="0" max="1" step="0.01" value="0.1">
+          <span>%</span>
+          <hr>
+          <div class="txn-deadline-section">
+            <label for="txn-deadline">Transaction Deadline:</label>
+            <select id="txn-deadline">
+              <option value="10">10 Minutes</option>
+              <option value="30">30 Minutes</option>
+              <option value="60">1 Hour</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="swap-actions">
+        <button id="preview-swap" class="btn btn-outline-light ">Preview Swap</button>
+        <button id="place-order"  class="btn btn-outline-light ">Place Order</button>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  
+<div class="desktop">
+
+
+
+
+
+
+  
+  <section class="swap-interface">
+    <h2>Swap Tokens</h2>
+
+    <div class="token-selection">
+      <div class="from-token">
+        <label for="from-token-address"><p class ="from">Swap From</p></label>
+        <input type="text" id="from-token-address" placeholder="Token Address">
+      </div>
+      <div class="to-token">
+        <label for="to-token-address"><p class ="from">Swap To</p></label>
+        <input type="text" id="to-token-address" placeholder="Token Address">
+      </div>
+    </div>
+
+    <div class="swap-details">
+      <div class="swap-amount">
+        <label for="from-amount">Amount:</label>
+        <input type="number" id="from-amount" placeholder="0.0">
+      </div>
+
+      <div class="order-type-section">
+        <label for="order-type">Order Type:</label>
+        <div class="radio-buttons">
+          <label for="market-order">Market Order</label>
+          <input type="radio" id="market-order" name="order-type" value="market">
+          <label for="limit-order">Limit Order</label>
+          <input type="radio" id="limit-order" name="order-type" value="limit">
+        </div>
+        <div class="limit-order-details" id="limit-order-section">
+          <label for="limit-rate">Limit Rate:</label>
+          <input type="number" id="limit-rate" placeholder="0.0" disabled>
+        </div>
+      </div>
+
+      <div class="swap-summary">
+        <div class="estimated-amount">
+          <label for="estimated-amount">Estimated Amount:</label>
+          <span id="estimated-amount">-</span>
+        </div>
+        <div class="gas-fee-section">
+          <label for="gas-fee">Gas Fee:</label>
+          <span id="gas-fee">Calculating...</span>
+        </div>
+        <div class="advanced-options" id="advanced-options-section">
+          <label for="slippage-tolerance">Slippage Tolerance:</label>
+          <input type="number" id="slippage-tolerance" min="0" max="1" step="0.01" value="0.1">
+          <span>%</span>
+          <div class="txn-deadline-section">
+            <label for="txn-deadline">Transaction Deadline:</label>
+            <select id="txn-deadline">
+              <option value="10">10 Minutes</option>
+              <option value="30">30 Minutes</option>
+              <option value="60">1 Hour</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="swap-actions">
+        <button id="preview-swap">Preview Swap</button>
+        <button id="place-order">Place Order</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+
+
+  
+  
+
+
+
+
+
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

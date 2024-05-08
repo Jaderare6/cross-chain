@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cross-Chain Token Swap</title>
+  <link rel="stylesheet" href="style.css"> <script src="https://cdnjs.cloudflare.com/ajax/libs/anime.js/3.8.3/anime.min.js"></script> </head>
+<body>
+
+  <header class="header">
+    <div class="logo-container">
+      <img src="logo.png" height="90px" style="border-radius: 50px;" alt="Cross-Chain Token Swap Logo">
+      <h1 class="logo-text">Cross-Chain Swap</h1>
+    </div>
+    <nav class="navigation" >
+      <ul class="nav_bar" >
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+      <button class="connect-wallet-btn">Connect Wallet</button> </nav>
+  </header>
+
+  <main class="main-content">
+
+    <section class="hero-section">
+      <div class="hero-text-container">
+        <h2>Swap tokens seamlessly across blockchains.</h2>
+        <p>Experience the future of decentralized finance with our secure and efficient cross-chain swap platform.</p>
+        <button class="get-started-btn">Get Started</button> </div>
+      
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <section class="swap-interface">
+      <h2>Swap Tokens</h2>
+
+      <div class="token-selection">
+        <div class="from-token">
+          <label for="swap-from">Swap From:</label>
+          <select id="swap-from">
+            <option value="eth">Ethereum (ETH)</option>
+            <option value="usdc">USD Coin (USDC)</option>
+            </select>
+        </div>
+        <div class="to-token">
+          <label for="swap-to">Swap To:</label>
+          <select id="swap-to">
+            <option value="eth">Ethereum (ETH)</option>
+            <option value="usdc">USD Coin (US USDC)</option>
+            </select>
+        </div>
+      </div>
+
+      <div class="swap-details">
+        <div class="swap-amount">
+          <label for="swap-amount">Amount:</label>
+          <input type="number" id="swap-amount" placeholder="0.0">
+          <div class="amount-controls">
+            <button>+</button>
+            <button>-</button>
+            <button id="use-max-balance">Use Max</button> </div>
+        </div>
+
+        <div class="order-type-section">
+          <label for="order-type">Order Type:</label>
+          <div class="radio-buttons">
+            <input type="radio" id="market-order" name="order-type" value="market">
+            <label for="market-order">Market Order</label>
+            <input type="radio" id="limit-order" name="order-type" value="limit">
+            <label for="limit-order">Limit Order</label>
+          </div>
+          <div class="limit-order-details" id="limit-order-section">
+            <label for="limit-rate">Limit Rate:</label>
+            <input type="number" id="limit-rate" placeholder="0.0" disabled>
+          </div>
+        
+        </div>
+
+        <div class="swap-summary">
+          <div class="estimated-amount">
+            <label for="estimated-amount">Estimated Amount:</label>
+            <span id="estimated-amount">-</span>
+          </div>
+          <div class="gas-fee-section">
+            <label for="gas-fee">Gas Fee:</label>
+            <span id="gas-fee">Calculating...</span>
+          </div>
+          <div class="advanced-options" id="advanced-options-section">
+            <label for="slippage-tolerance">Slippage Tolerance:</label>
+            <input type="number" id="slippage-tolerance" min="0" max="1" step="0.01" value="0.1">
+            <span>%</span>
+            <div class="txn-deadline-section">
+              <label for="txn-deadline">Transaction Deadline:</label>
+              <select id="txn-deadline">
+                <option value="10">10 Minutes</option>
+                <option value="30">30 Minutes</option>
+                <option value="60">1 Hour</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="swap-actions">
+          <button id="preview-swap">Preview Swap</button>
+          <button id="place-order">Place Order</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-history">
+      <h2>Order History</h2>
+      <div id="order-history-list">
+        <template id="order-history-item-template">
+          <div class="order-item">
+            <div class="order-details">
+              <span class="order-id">[[orderId]]</span>
+              <span class="order-type">[[orderType]]</span>
+              <span class="swap-pair">[[fromTokenSymbol]] -&gt; [[toTokenSymbol]]</span>
+              <span class="swap-amount">[[swapAmount]] [[fromTokenSymbol]]</span>
+              <span class="estimated-amount">[[estimatedAmount]] [[toTokenSymbol]] (estimated)</span>
+            </div>
+            <div class="order-status">
+              <span class="status" id="order-status-[[orderId]]">[[orderStatus]]</span>
+            </div>
+          </div>
+        </template>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Cross-Chain Token Swap. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
